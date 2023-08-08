@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import MessagesList from '../MessagesList';
+import MessagesList from './MessagesList';
 
 describe('MessageList', () => {
   it('renders empty list', () => {

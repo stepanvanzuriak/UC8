@@ -1,4 +1,4 @@
-import formValidator from '../formValidator.js';
+import formValidator from './formValidator.js';
 
 describe('formValidator', () => {
   it('invalid with no params', () => {

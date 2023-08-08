@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
-import MessageForm from '../MessageForm';
-import store from '../../redux/store';
+import MessageForm from './MessageForm';
+import store from '../redux/store';
 
 describe('MessageForm', () => {
   it('renders as form', () => {
