@@ -1,12 +1,13 @@
+import { ADD_RECORD } from './actions';
+
 const initState = {
-  firstName: '',
-  lastName: '',
-  email: '',
-  message: '',
+  records: [],
 };
 
 const rootReducer = (state = initState, action) => {
   switch (action.type) {
+    case ADD_RECORD:
+      return { ...state, records: [...state.records, action.payload] };
     default:
       return state;
   }

@@ -1,21 +1,21 @@
-import validator from 'validator';
+import isEmail from 'validator/es/lib/isEmail';
 
 const validate = ({ firstName, lastName, email, message }) => {
   let errors = {};
 
-  if (!validator.isLength(firstName, 1)) {
+  if (firstName.length < 1) {
     errors = { ...errors, firstName: "First name shouldn't be empty" };
   }
 
-  if (!validator.isLength(lastName, 1)) {
+  if (lastName.length < 1) {
     errors = { ...errors, lastName: "Last name shouldn't be empty" };
   }
 
-  if (!validator.isEmail(email)) {
+  if (!isEmail(email)) {
     errors = { ...errors, email: 'Email should be valid' };
   }
 
-  if (!validator.isLength(message, 10)) {
+  if (message.length < 10) {
     errors = {
       ...errors,
       message: 'Message should be at least 10 characters long',
