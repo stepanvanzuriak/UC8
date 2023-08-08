@@ -42,24 +42,24 @@ const MessageForm = () => {
   };
 
   return (
-    <form ref={formRef} onChange={onChange} onSubmit={onSubmit}>
+    <form data-testid="message-form" ref={formRef} onChange={onChange} onSubmit={onSubmit}>
       <input name="firstName" placeholder="First Name" />
-      <label className="validation-error" htmlFor="firstName">
+      <label data-testid="first-name-label" className="validation-error" htmlFor="firstName">
         {validationErrors.firstName}
       </label>
 
       <input name="lastName" placeholder="Last Name" />
-      <label className="validation-error" htmlFor="lastName">
+      <label data-testid="last-name-label" className="validation-error" htmlFor="lastName">
         {validationErrors.lastName}
       </label>
 
       <input name="email" placeholder="Email" />
-      <label className="validation-error" htmlFor="email">
+      <label data-testid="email-label" className="validation-error" htmlFor="email">
         {validationErrors.email}
       </label>
 
       <textarea name="message" placeholder="Message" />
-      <label className="validation-error" htmlFor="message">
+      <label data-testid="message-label" className="validation-error" htmlFor="message">
         {validationErrors.message}
       </label>
 

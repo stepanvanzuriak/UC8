@@ -6,10 +6,11 @@ const MessagesList = () => {
   const records = useSelector(getRecords);
 
   return (
-    <div className="messages-list">
+    <div data-testid="messages-list" className="messages-list">
       {records.map(({ firstName, lastName, email, message }) => {
         return (
           <Message
+            key={`${firstName} ${lastName} ${email} ${message}`}
             firstName={firstName}
             lastName={lastName}
             email={email}

@@ -1,6 +1,11 @@
-import isEmail from 'validator/es/lib/isEmail';
+import validator from 'validator';
 
-const validate = ({ firstName, lastName, email, message }) => {
+const validate = ({
+  firstName = '',
+  lastName = '',
+  email = '',
+  message = '',
+} = {}) => {
   let errors = {};
 
   if (firstName.length < 1) {
@@ -11,7 +16,7 @@ const validate = ({ firstName, lastName, email, message }) => {
     errors = { ...errors, lastName: "Last name shouldn't be empty" };
   }
 
-  if (!isEmail(email)) {
+  if (!validator.isEmail(email)) {
     errors = { ...errors, email: 'Email should be valid' };
   }
 
