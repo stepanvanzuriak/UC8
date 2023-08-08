@@ -36,3 +36,8 @@ button[type='submit'] {
   font-weight: bold;
   color: red;
 }
+
+.messages-list {
+  max-width: 300px;
+  margin: auto;
+}
